@@ -5,13 +5,13 @@ import os
 # --- Setup your Snowflake connection ---
 def get_snowflake_connection():
     return snowflake.connector.connect(
-        user=os.getenv("SF_USER"),
-        password=os.getenv("SF_PASSWORD"),
-        account=os.getenv("SF_ACCOUNT"),
-        role=os.getenv("SF_ROLE"),
-        warehouse=os.getenv("SF_WAREHOUSE"),
-        database=os.getenv("SF_DATABASE"),
-        schema=os.getenv("SF_SCHEMA"),
+        user=st.("SF_USER"),
+        password=st.("SF_PASSWORD"),
+        account=st.("SF_ACCOUNT"),
+        role=st.("SF_ROLE"),
+        warehouse=st.("SF_WAREHOUSE"),
+        database=st.("SF_DATABASE"),
+        schema=st.("SF_SCHEMA"),
     )
  
 # --- Fetch list of users or roles ---
