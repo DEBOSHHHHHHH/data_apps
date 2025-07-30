@@ -6,7 +6,7 @@ import os
 def get_snowflake_connection():
     return snowflake.connector.connect(
     SF_USER="debo",
-    SF_PASSWORD="Loknath@11918845",
+    SF_PASSWORD=,
     SF_ACCOUNT="qdhlhcz-xp11495",
     SF_WAREHOUSE="WH_1",
     SF_DATABASE="DB1",
